@@ -8,4 +8,10 @@ describe('function tests', () => {
 
     return assert.deepEqual(mapped, [5, 6, 7])
   })
+  it('should add ten to each item in the array', () => {
+    const original = [4, 5, 6]
+    const mapped = map(original, (i) => i + 10)
+
+    return assert.deepEqual(mapped, [5, 6, 7])
+  })
 })

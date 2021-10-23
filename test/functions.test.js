@@ -12,6 +12,6 @@ describe('function tests', () => {
     const original = [4, 5, 6]
     const mapped = map(original, (i) => i + 10)
 
-    return assert.deepEqual(mapped, [40, 50, 60])
+    return assert.deepEqual(mapped, [14, 15, 16])
   })
 })

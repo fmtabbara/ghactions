@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert'
-import { map } from '../functions.js'
+import { map, reverseString } from '../functions.js'
 
 describe('function tests', () => {
   it('should add one to each number in the array', () => {
@@ -19,5 +19,11 @@ describe('function tests', () => {
     const mapped = map(original, (i) => i + 10)
 
     return assert.deepEqual(mapped, [14, 15, 16])
+  })
+  it('should reverse a string', () => {
+    const original = 'TestString'
+    const reversed = reverseString(original)
+
+    return assert.deepEqual(reversed, 'gnirtStseT')
   })
 })

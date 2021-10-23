@@ -1,0 +1,13 @@
+{
+  "name": "ghactions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}

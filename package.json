@@ -5,6 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "dev": "npx serve src",
     "test": "mocha"
   },
   "devDependencies": {

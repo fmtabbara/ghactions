@@ -6,4 +6,4 @@ jobs:
         - checkout
         - run: yarn install
         - run: yarn test
-        - run: curl -d {} -X POST {netlify_hook}
+        - run: curl -d {} -X POST ${netlify_hook}

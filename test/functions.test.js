@@ -29,6 +29,6 @@ describe("function tests", () => {
   it("should add two numbers", () => {
     const result = add(1, 2);
 
-    return assert.deepEqual(result, 3);
+    return assert.deepEqual(result, 4);
   });
 });

@@ -1,3 +1,9 @@
 h1 {
   color: salmon;
 }
+
+html,
+body,
+#root {
+  background: skyblue;
+}

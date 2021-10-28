@@ -1,9 +1,11 @@
 export const map = (arr, cb) => {
-  const mapped = []
+  const mapped = [];
   for (let i = 0; i < arr.length; i++) {
-    mapped.push(cb(arr[i]))
+    mapped.push(cb(arr[i]));
   }
-  return mapped
-}
+  return mapped;
+};
 
-export const reverseString = (str) => str.split('').reverse().join('')
+export const reverseString = (str) => str.split("").reverse().join("");
+
+export const add = (a, b) => a + b;

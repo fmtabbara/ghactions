@@ -10,6 +10,7 @@
   <body>
     <div id="root">
       <h1>Hello world!</h1>
+      <input type="text" id="input" />
       <button
         class="g-recaptcha"
         data-sitekey="6LdEbE8dAAAAANGSOPWu08nERdUbRMp3LVrooo3Z"
@@ -20,8 +21,15 @@
       </button>
     </div>
     <script>
-      function onSubmit(token) {
-        console.log(token)
+      const onSubmit = async (token) => {
+        const input = document.getElementById('input')
+        const secret = input.value
+        const res = await fetch(
+          'https://www.google.com/recaptcha/api/siteverify',
+          { method: 'POST', secret, response: token }
+        )
+        const json = await res.json()
+        console.log(json)
       }
       window.onSubmit = onSubmit
     </script>

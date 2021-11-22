@@ -21,15 +21,16 @@
       </button>
     </div>
     <script>
-      const onSubmit = async (token) => {
+      function onSubmit(token) {
         const input = document.getElementById('input')
         const secret = input.value
-        const res = await fetch(
-          'https://www.google.com/recaptcha/api/siteverify',
-          { method: 'POST', secret, response: token }
-        )
-        const json = await res.json()
-        console.log(json)
+        fetch('https://www.google.com/recaptcha/api/siteverify', {
+          method: 'POST',
+          secret,
+          response: token,
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data))
       }
       window.onSubmit = onSubmit
     </script>
